@@ -1,0 +1,19 @@
+\fancyhf{} % clear all header and footer fields
+\fancyhead[RO,R]{\thepage} %RO=right odd, RE=right even
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{center}
+    
+    \vspace{0.9cm}
+    \textbf{Abstract}
+\end{center}
+
+\doublespacing
+
+The American cranberry (\textit{Vaccinium macrocarpon} Ait.) is a high-value specialty crop, with Wisconsin producing over 60\% of the U.S. harvest \cite{usda-nass_cranberries_2024}. Due to this importance, accurate and early yield prediction is critical for efficient crop management and harvest planning, yet existing approaches are labor-intensive, inconsistent, and often restricted to low-frequency manual scouting \cite{haufler_microwave_2022}. Recent advances in machine learning and agricultural robotics offer new opportunities to overcome these limitations \cite{ni_deep_2020,cinat_comparison_2019}.
+
+This study presents an automated ground-based robotic imaging platform paired with deep learning models to track flowering and fruit set across 626 cranberry breeding plots over twelve imaging sessions. A custom dataset was created using the Segment Anything Model for image annotation \cite{kirillov_segment_2023}, enabling training and evaluation of object detection architectures including YOLOv11 \cite{jocher_ultralytics_2023}, YOLOv12, and RF-DETR \cite{robinson_rf-detr_2025}. Model performance was evaluated using precision, recall, and F1-score metrics. The YOLOv12 model achieved a mean precision of 0.79, recall of 0.66, and an F1-score of 0.72 across validation sets, while RF-DETR produced more accurate results (precision = 0.77, recall = 0.70, F1 = 0.73). Inference speeds were also benchmarked to support real-time and in-field deployment.
+
+Flower counts predicted by the best-performing models were correlated with ground-truth berry counts at harvest. Statistical analysis demonstrated significant positive correlations ($r = 0.68$, $p < 0.001$) between flower density and final berry yield, confirming that flowering intensity is a reliable predictor of fruit set. Regression models showed that both the timing and concentration of flowering events contributed to variation in berry production, highlighting the importance of repeated sampling throughout the flowering season \cite{brown_fruit_2006,parent_current_2021}.
+
+By integrating robotics with image-based deep learning, this system reduces sampling time, improves data resolution, and enables year-round monitoring. The approach provides a scalable framework for cranberry breeding, yield forecasting, and precision management, and can be extended to other specialty crops facing similar challenges in high-resolution monitoring \cite{loarca_berryportraits_2024}.

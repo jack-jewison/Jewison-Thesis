@@ -1,0 +1,131 @@
+
+\documentclass[11pt]{report}
+
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage[width=150mm,top=35mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage[table]{xcolor}
+\usepackage{lscape}
+\usepackage{adjustbox}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage[style=numeric,sorting=none]{biblatex}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage[justification=centering]{caption}
+\usepackage{enumitem}
+\usepackage{placeins}
+
+\pagestyle{fancyplain}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+
+\newcommand{\rnp}[3]{\ensuremath{\mathit{r} = #1,~\mathit{n} = #2,~\mathit{p}~#3}}
+
+\renewcommand{\headrulewidth}{0pt}
+
+\addbibresource{references.bib}
+
+\graphicspath{ {images/} }
+
+\usepackage[font=small,labelfont=bf,labelsep=period]{caption}
+\captionsetup[sub]{labelfont=bf,font=small,labelformat=parens} % => (a), (b)
+
+\setlength{\headheight}{14pt}
+\setlength{\textfloatsep}{30pt plus 2pt minus 4pt} % Adjust space between floats and text
+\setlength{\floatsep}{15pt plus 2pt minus 2pt}    % Adjust space between floats
+\setlength{\abovecaptionskip}{10pt}                % Adjust space above caption
+\setlength{\belowcaptionskip}{10pt}                % Adjust space below caption
+\setlength{\parindent}{0pt}
+
+\title{A System Of Automated Data Collection and Use Of Machine Learning To Track Flowering and Fruiting In Cranberry Plots for Berry Count Prediction }
+\author{John Jewison}
+\date{05 05 2025}
+
+\begin{document}
+\pagenumbering{roman} 
+
+\input{titlepage}
+
+\doublespacing
+
+\chapter*{Dedication}
+
+To all the dreamers, the doers, and the courageous souls stepping into uncharted territory:
+
+This is for you—the ones who dare to leave comfort behind, to try, to stumble, to rise, and to try again. Your willingness to embrace uncertainty and explore the unknown inspires us all.
+
+May this journey, whether smooth or rocky, ignite growth, spark joy, and remind you of the infinite strength within. Here's to every brave step you take—may it lead to a life full of discovery, resilience, and fulfillment.
+
+Keep going. You're creating something extraordinary.
+
+ 
+
+\chapter*{Declaration}
+
+"I, John Jewison, hereby declare that this thesis, entitled 'A System Of Automated Data Collection and Use Of Machine Learning To Track Flowering In Cranberry Plots with Yield Prediction', is my own original work, conducted under the supervision of Dr. Matthew Digman and Dr. Juan Zalapa, and that all sources used have been duly acknowledged and referenced according to academic integrity standards. This thesis has not been submitted previously for any other degree, and all materials included are my own unless otherwise cited."
+
+  \vspace{0.5cm}
+\begin{tabular}{@{}p{.5in}p{4in}@{}}
+Signed: & \hrulefill \\
+& John Jewison \\
+\end{tabular}
+
+\chapter*{Acknowledgments}
+
+I want to thank all those that have supported and helped me through my studies at the University of Wisconsin-Madison. As a non-traditional graduate student, the learning environment can feel challenging, and relating to other students can seem more difficult. However, it was easier to overcome these feelings by reaching out to those around me, both personally and within the academic environment at UW.
+
+To Dr. Juan Zalapa, who I am indebted to for not just teaching me as much as he could about cranberries but for sharing his infectious enthusiasm and passion for the berries. For guiding me to the answers I needed and to the questions that I should ask. 
+
+My sincere gratitude to Dr. Matthew Digman, who first persuaded me to continue my pursuit of education after leaving the academic world, and for making it easier to transition back with his advice and guidance.  
+
+A special thank you to all the fellow students who helped me on this project, whether collecting data or simply sharing good times together; they truly did make the load feel lighter and the task feel less impossible.
+
+This research was possible thanks to the financial support of the Cranberry Growers Board as well as knowledge shared by individual  growers, in addition to the assistance of  the staff at the Wisconsin Cranberry Research Station.
+
+Finally, I am immensely thankful to my new wife Natalie for her loving support and encouragement as we take on yet another ambition.
+
+\newpage
+
+\input{abstract}
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+\pagenumbering{arabic} 
+
+\chapter*{General Introduction}
+\input{chapters/general_introduction}
+\addcontentsline{toc}{section}{General Introduction}
+
+\chapter*{Thesis Objective}
+\input{chapters/ThesisObjective}
+\addcontentsline{toc}{section}{Thesis Objective}
+
+\chapter{An Automated Data Collection Platform}
+\input{chapters/ImageCollection}
+
+\chapter{Cranberry Flower Detection from Ground Imagery for Early Yield Prediction}
+\input{chapters/MachineLearningModel}
+
+
+\appendix
+\chapter*{Appendix A}
+\addcontentsline{toc}{chapter}{Appendix A} % if you want it in the TOC
+\input{chapters/appendix}
+
+\end{document}
